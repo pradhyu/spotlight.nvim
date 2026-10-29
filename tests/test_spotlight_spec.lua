@@ -6,6 +6,7 @@ local picker = require("spotlight.core.picker")
 local grid = require("spotlight.core.grid")
 local zoom = require("spotlight.core.zoom")
 local dim = require("spotlight.core.dim")
+local resize = require("spotlight.core.resize")
 
 spotlight.setup()
 
@@ -79,6 +80,22 @@ local dim_off = dim.toggle_dim("off")
 assert_eq(dim_off, false, "toggle_dim('off') disables dimming")
 local dim_on = dim.toggle_dim("on")
 assert_eq(dim_on, true, "toggle_dim('on') enables dimming")
+
+-- Test 8: Golden-ratio resize preserves bottom bar (non-user buffer) height
+vim.cmd("botright 3split")
+local hud_win = vim.api.nvim_get_current_win()
+local hud_buf = vim.api.nvim_create_buf(false, true)
+vim.bo[hud_buf].buftype = "nofile"
+vim.bo[hud_buf].filetype = "bufferbuddy_hud"
+vim.api.nvim_win_set_buf(hud_win, hud_buf)
+vim.api.nvim_win_set_height(hud_win, 3)
+
+assert_eq(resize.is_fixed_window(hud_win), true, "Bottom bar / non-user buffer is detected as fixed window")
+vim.api.nvim_set_current_win(wins_after[1].win)
+resize.toggle_golden("on")
+assert_eq(vim.api.nvim_win_get_height(hud_win), 3, "Golden-ratio resize does not alter bottom bar height")
+resize.toggle_golden("off")
+assert_eq(vim.api.nvim_win_get_height(hud_win), 3, "Equalize does not alter bottom bar height")
 
 print(string.format("=== Results: %d passed, %d failed ===", passed, failed))
 if failed > 0 then

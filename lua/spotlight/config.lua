@@ -58,6 +58,13 @@ M.defaults = {
     focused_width_ratio = 0.62,          -- Target width % for focused window
     focused_height_ratio = 0.62,         -- Target height % for focused window
     step_size = 5,                       -- Step size for directional resize helpers
+    excluded_buftypes = {
+      "nofile",
+      "quickfix",
+      "prompt",
+      "help",
+      "acwrite",
+    },
     excluded_filetypes = {
       "neo-tree",
       "NvimTree",
@@ -65,6 +72,21 @@ M.defaults = {
       "qf",
       "help",
       "supermarkdown_toc",
+      "bufferbuddy_hud",
+      "spotlight_hud",
+      "spotlight_grid",
+      "spotlight_badge",
+      "dap-repl",
+      "dapui_watches",
+      "dapui_stacks",
+      "dapui_breakpoints",
+      "dapui_scopes",
+      "dapui_console",
+      "neotest-summary",
+      "neotest-output-panel",
+      "overseer",
+      "aerial",
+      "Outline",
     },
   },
 
