@@ -29,19 +29,19 @@
 
 ## ⌨️ Default Keybindings
 
-| Keybinding | Mode | Command / API | Description |
-| :--- | :---: | :--- | :--- |
-| **`<leader>wf`** / **`<A-w>`** | `n`, `t` | `:SpotlightPick` | **Visual Split Picker**: `h/j/k/l` + `<CR>` or `[a][s][d][f]` badge jump |
-| **`<leader>wb`** / **`<A-b>`** | `n`, `t` | `:SpotlightBuffers tab` | **Buffer Exposé (Current Tab)**: 2D preview cards + multi-select layout composer |
-| **`<leader>wB`** | `n`, `t` | `:SpotlightBuffers all` | **Buffer Exposé (All Tabs)**: Inspect & pick buffers across all tabs |
-| **`<leader>wz`** / **`<C-w>z`** | `n`, `t` | `:SpotlightZoom` | **Split Zoom**: Maximize/restore active split (`toggle_split_zoom`) |
-| **`<leader>ws`** | `n` | `:SpotlightPick swap` | **Swap Splits**: Pick a target split to swap with the active window |
-| **`<leader>wx`** | `n` | `:SpotlightPick close` | **Close Split**: Pick a target split to close remotely |
-| **`<leader>wp`** | `n` | `:SpotlightPick pull` | **Pull Buffer**: Pick another split and pull its buffer into active window |
-| **`<leader>wd`** | `n` | `:SpotlightDim toggle` | **Toggle Dimming**: Toggle unfocused window dimming on/off |
-| **`<leader>wg`** | `n` | `:SpotlightGolden toggle` | **Toggle Golden Ratio**: Toggle automatic golden-ratio split sizing |
-| **`<leader>w=`** | `n` | `spotlight.equalize()` | **Equalize Splits**: Balance all non-fixed splits |
-| **`<leader>wM`** | `n` | `:SpotlightHUD` | **Spotlight HUD**: Open interactive Spotlight Control Center |
+| Keybinding                      |   Mode   | Command / API             | Description                                                                      |
+| :------------------------------ | :------: | :------------------------ | :------------------------------------------------------------------------------- |
+| **`<leader>wf`** / **`<A-w>`**  | `n`, `t` | `:SpotlightPick`          | **Visual Split Picker**: `h/j/k/l` + `<CR>` or `[a][s][d][f]` badge jump         |
+| **`<leader>wb`** / **`<A-b>`**  | `n`, `t` | `:SpotlightBuffers tab`   | **Buffer Exposé (Current Tab)**: 2D preview cards + multi-select layout composer |
+| **`<leader>wB`**                | `n`, `t` | `:SpotlightBuffers all`   | **Buffer Exposé (All Tabs)**: Inspect & pick buffers across all tabs             |
+| **`<leader>wz`** / **`<C-w>z`** | `n`, `t` | `:SpotlightZoom`          | **Split Zoom**: Maximize/restore active split (`toggle_split_zoom`)              |
+| **`<leader>ws`**                |   `n`    | `:SpotlightPick swap`     | **Swap Splits**: Pick a target split to swap with the active window              |
+| **`<leader>wx`**                |   `n`    | `:SpotlightPick close`    | **Close Split**: Pick a target split to close remotely                           |
+| **`<leader>wp`**                |   `n`    | `:SpotlightPick pull`     | **Pull Buffer**: Pick another split and pull its buffer into active window       |
+| **`<leader>wd`**                |   `n`    | `:SpotlightDim toggle`    | **Toggle Dimming**: Toggle unfocused window dimming on/off                       |
+| **`<leader>wg`**                |   `n`    | `:SpotlightGolden toggle` | **Toggle Golden Ratio**: Toggle automatic golden-ratio split sizing              |
+| **`<leader>w=`**                |   `n`    | `spotlight.equalize()`    | **Equalize Splits**: Balance all non-fixed splits                                |
+| **`<leader>wM`**                |   `n`    | `:SpotlightHUD`           | **Spotlight HUD**: Open interactive Spotlight Control Center                     |
 
 ---
 

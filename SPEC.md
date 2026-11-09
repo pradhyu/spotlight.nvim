@@ -237,31 +237,31 @@ Mirrors Ghostty's `unfocused-split-opacity` inside Neovim:
 
 ### 5.1 Default Keybindings
 
-| Keybinding | Mode | API Call | Description |
-| :--- | :---: | :--- | :--- |
-| **`<leader>wf`** / **`<A-w>`** | `n`, `t` | `spotlight.pick_window()` | **Visual Split Picker**: Overlay badges + `h/j/k/l` selection on splits in active tab |
-| **`<leader>wb`** / **`<A-b>`** | `n`, `t` | `spotlight.open_grid({ scope = "tab" })` | **Buffer Exposé (Current Tab)**: 2D preview grid scoped to the active tab workspace |
-| **`<leader>wB`** | `n`, `t` | `spotlight.open_grid({ scope = "all" })` | **Buffer Exposé (All Tabs)**: 2D preview grid across all tabs with `[Tab N]` badges |
-| **`<leader>wz`** / **`<C-w>z`** | `n`, `t` | `spotlight.toggle_zoom()` | **Ghostty Split Zoom**: Maximize/restore active split (`toggle_split_zoom`) |
-| **`<leader>ws`** | `n` | `spotlight.swap_window()` | **Visual Swap**: Pick a target split by `h/j/k/l` or badge to swap with current window |
-| **`<leader>wx`** | `n` | `spotlight.close_window()` | **Visual Close**: Pick a target split by `h/j/k/l` or badge to close remotely |
-| **`<leader>wp`** | `n` | `spotlight.pull_buffer()` | **Visual Pull**: Pick another split and pull its buffer into current window |
-| **`<leader>wd`** | `n` | `spotlight.toggle_dim()` | **Toggle Dimming**: Toggle unfocused window dimming on/off (`unfocused-split-opacity`) |
-| **`<leader>wg`** | `n` | `spotlight.toggle_golden()` | **Toggle Golden Ratio**: Toggle automatic golden-ratio split sizing |
-| **`<leader>w=`** | `n` | `spotlight.equalize()` | **Equalize Splits**: Balance all non-fixed splits while preserving sidebar widths |
-| **`<leader>wM`** | `n` | `spotlight.open_hud()` | **Spotlight HUD**: Open interactive Spotlight & Layout Preset Manager |
+| Keybinding                      |   Mode   | API Call                                 | Description                                                                            |
+| :------------------------------ | :------: | :--------------------------------------- | :------------------------------------------------------------------------------------- |
+| **`<leader>wf`** / **`<A-w>`**  | `n`, `t` | `spotlight.pick_window()`                | **Visual Split Picker**: Overlay badges + `h/j/k/l` selection on splits in active tab  |
+| **`<leader>wb`** / **`<A-b>`**  | `n`, `t` | `spotlight.open_grid({ scope = "tab" })` | **Buffer Exposé (Current Tab)**: 2D preview grid scoped to the active tab workspace    |
+| **`<leader>wB`**                | `n`, `t` | `spotlight.open_grid({ scope = "all" })` | **Buffer Exposé (All Tabs)**: 2D preview grid across all tabs with `[Tab N]` badges    |
+| **`<leader>wz`** / **`<C-w>z`** | `n`, `t` | `spotlight.toggle_zoom()`                | **Ghostty Split Zoom**: Maximize/restore active split (`toggle_split_zoom`)            |
+| **`<leader>ws`**                |   `n`    | `spotlight.swap_window()`                | **Visual Swap**: Pick a target split by `h/j/k/l` or badge to swap with current window |
+| **`<leader>wx`**                |   `n`    | `spotlight.close_window()`               | **Visual Close**: Pick a target split by `h/j/k/l` or badge to close remotely          |
+| **`<leader>wp`**                |   `n`    | `spotlight.pull_buffer()`                | **Visual Pull**: Pick another split and pull its buffer into current window            |
+| **`<leader>wd`**                |   `n`    | `spotlight.toggle_dim()`                 | **Toggle Dimming**: Toggle unfocused window dimming on/off (`unfocused-split-opacity`) |
+| **`<leader>wg`**                |   `n`    | `spotlight.toggle_golden()`              | **Toggle Golden Ratio**: Toggle automatic golden-ratio split sizing                    |
+| **`<leader>w=`**                |   `n`    | `spotlight.equalize()`                   | **Equalize Splits**: Balance all non-fixed splits while preserving sidebar widths      |
+| **`<leader>wM`**                |   `n`    | `spotlight.open_hud()`                   | **Spotlight HUD**: Open interactive Spotlight & Layout Preset Manager                  |
 
 ### 5.2 User Commands
 
-| Command | Arguments | Description |
-| :--- | :--- | :--- |
-| **`:SpotlightPick`** | `[jump\|swap\|close\|pull]` | Trigger visual overlay badge + `h/j/k/l` picker on all visible splits |
-| **`:SpotlightBuffers`** | `[tab\|all\|code\|term]` | Open the 2D Buffer Exposé preview grid & multi-select layout composer |
-| **`:SpotlightZoom`** | `[float\|native]` | Toggle Ghostty-style split zoom on the active window |
-| **`:SpotlightLayout`** | `<vsplit\|hsplit\|grid\|main_left\|main_top>` | Arrange currently visible or selected buffers into a preset split layout |
-| **`:SpotlightDim`** | `[on\|off\|toggle]` | Control unfocused split dimming |
-| **`:SpotlightGolden`** | `[on\|off\|toggle]` | Control automatic golden-ratio split resizing |
-| **`:SpotlightHUD`** | *none* | Open the interactive Spotlight Control Center |
+| Command                 | Arguments                                     | Description                                                              |
+| :---------------------- | :-------------------------------------------- | :----------------------------------------------------------------------- |
+| **`:SpotlightPick`**    | `[jump\|swap\|close\|pull]`                   | Trigger visual overlay badge + `h/j/k/l` picker on all visible splits    |
+| **`:SpotlightBuffers`** | `[tab\|all\|code\|term]`                      | Open the 2D Buffer Exposé preview grid & multi-select layout composer    |
+| **`:SpotlightZoom`**    | `[float\|native]`                             | Toggle Ghostty-style split zoom on the active window                     |
+| **`:SpotlightLayout`**  | `<vsplit\|hsplit\|grid\|main_left\|main_top>` | Arrange currently visible or selected buffers into a preset split layout |
+| **`:SpotlightDim`**     | `[on\|off\|toggle]`                           | Control unfocused split dimming                                          |
+| **`:SpotlightGolden`**  | `[on\|off\|toggle]`                           | Control automatic golden-ratio split resizing                            |
+| **`:SpotlightHUD`**     | *none*                                        | Open the interactive Spotlight Control Center                            |
 
 ---
 
